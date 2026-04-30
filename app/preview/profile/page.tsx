@@ -3,6 +3,8 @@ import { Metadata } from "next";
 const baseUrl = "https://rarelens.ai";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const imageUrl = `${baseUrl}/og/profile-aggressive.png`;
+
   return {
     title: "Aakash sees Ridhima’s answers every day.",
     description: "You’re not seeing it.",
@@ -10,24 +12,30 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Aakash sees Ridhima’s answers every day.",
       description: "You’re not seeing it.",
       url: `${baseUrl}/preview/profile`,
+      type: "website",
       images: [
         {
-          url: `${baseUrl}/og/profile-aggressive.png`,
+          url: imageUrl,
+          secureUrl: imageUrl, // important for WhatsApp
           width: 1200,
           height: 630,
+          alt: "RareLens preview",
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: "Aakash sees Ridhima’s answers every day.",
       description: "You’re not seeing it.",
-      images: [`${baseUrl}/og/profile-aggressive.png`],
+      images: [imageUrl],
     },
   };
 }
 
 export default function Page() {
-  return <div>Preview test</div>;
+  return (
+    <div style={{ padding: 40, fontSize: 18 }}>
+      Preview test page
+    </div>
+  );
 }
