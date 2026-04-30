@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const baseUrl = "https://rarelens.ai";
+const baseUrl = "https://www.rarelens.ai";
 
 export async function generateMetadata(): Promise<Metadata> {
   const imageUrl = `${baseUrl}/og/profile-aggressive.png`;
