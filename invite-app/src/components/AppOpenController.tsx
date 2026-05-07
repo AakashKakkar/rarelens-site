@@ -29,7 +29,6 @@ function getMobilePlatform() {
 
 export function AppOpenController({
   appRoute,
-  primaryAction,
   iosStoreUrl,
   androidStoreUrl,
 }: AppOpenControllerProps) {
@@ -97,17 +96,9 @@ export function AppOpenController({
   }
 
   return (
-    <div className="mt-7 flex w-full flex-col gap-3 sm:flex-row">
-      {appRoute ? (
-        <a
-          className="inline-flex h-12 flex-1 items-center justify-center rounded-[6px] bg-[#161311] px-5 text-sm font-semibold text-white transition hover:bg-[#2a2420]"
-          href={appRoute}
-        >
-          {primaryAction}
-        </a>
-      ) : null}
+    <div className="mt-8 flex w-full">
       <a
-        className="inline-flex h-12 flex-1 items-center justify-center rounded-[6px] border border-[#d7cec6] bg-white px-5 text-sm font-semibold text-[#161311] transition hover:border-[#b8aca1]"
+        className="inline-flex h-14 w-full items-center justify-center rounded-[7px] bg-[#161311] px-6 text-base font-semibold text-white transition hover:bg-[#2a2420]"
         href={storeUrl}
         rel="noreferrer"
       >
