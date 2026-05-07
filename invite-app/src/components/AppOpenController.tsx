@@ -69,6 +69,12 @@ export function AppOpenController({
 
     const fallbackTimer = window.setTimeout(() => {
       if (!likelyOpened && document.visibilityState === "visible") {
+        if (detectedPlatform === "ios") {
+          setShowFallback(true);
+          window.location.assign(iosStoreUrl);
+          return;
+        }
+
         setShowFallback(true);
       }
     }, 1000);
