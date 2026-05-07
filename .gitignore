@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# invite app local artifacts
+invite-app/.next
+invite-app/.vercel
+invite-app/.env.local
+invite-app/tsconfig.tsbuildinfo
+invite-app/assets/Geist-Regular.ttf
+invite-app/assets/InterVariable.ttf
